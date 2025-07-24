@@ -2,49 +2,88 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Numberdar AI - Dushyant Chauhan</title>
   <style>
     body {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      flex-direction: column;
       background-color: #fefce8;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       text-align: center;
+      padding-top: 100px;
     }
-    .pfp {
-      width: 140px;
-      height: 140px;
+
+    .profile-pic {
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
-      border: 4px solid #eab308;
+      border: 4px solid #facc15;
       object-fit: cover;
-      margin-bottom: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
-    h1 {
-      font-size: 2.2rem;
-      margin: 0.5rem 0;
+
+    .name {
+      font-size: 32px;
+      font-weight: bold;
+      margin-top: 20px;
+      color: #1f2937;
     }
-    p {
-      font-size: 1.2rem;
-      color: #444;
+
+    .greeting {
+      font-size: 18px;
+      margin-top: 10px;
+      color: #374151;
+    }
+
+    .redirecting {
+      margin-top: 30px;
+      font-size: 16px;
+      color: #6b7280;
+    }
+
+    .button-container {
+      margin-top: 40px;
+    }
+
+    .toggle-button {
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #facc15;
+      color: #111;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .toggle-button:hover {
+      background-color: #eab308;
     }
   </style>
 </head>
 <body>
-  <img src="https://i.imgur.com/w9qM3LB.png" alt="Dushyant Chauhan" class="pfp" />
-  <h1>Dushyant Chauhan</h1>
-  <p>Jai Baba Mohan, Baba Ram Ki Jai, Shri Shyam</p>
-  <p>Redirecting you to your AI assistant...</p>
+
+  <img src="https://raw.githubusercontent.com/Numberdar2340/assets/main/dushyant.jpg" alt="Dushyant Chauhan" class="profile-pic" />
+  <div class="name">Dushyant Chauhan</div>
+  <div class="greeting">Jai Baba Mohan, Baba Ram Ki Jai, Jai Shri Shyam</div>
+
+  <div class="redirecting">Redirecting to your AI assistant...</div>
+
+  <div class="button-container">
+    <button class="toggle-button" onclick="toggleSite()">🔁 Switch to Result Website</button>
+  </div>
 
   <script>
+    // Auto redirect after 3 sec to AI site
     setTimeout(() => {
       window.location.href = "https://chatbot-ui-pi-ruby.vercel.app";
     }, 3000);
+
+    function toggleSite() {
+      // Redirect to Numberdar Results
+      window.location.href = "https://numberdarresults.onrender.com";
+    }
   </script>
+
 </body>
 </html>
