@@ -3,95 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Numberdar AI - Dushyant Chauhan</title>
+  <title>Numberdar AI – Dushyant Chauhan</title>
+  <meta http-equiv="refresh" content="4;url=https://numberdarresults.web.app" />
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      background: #fdfdfd;
-      text-align: center;
-    }
-    .profile-pic {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #ffba08;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      margin-bottom: 15px;
-    }
-    h1 {
-      font-size: 32px;
-      margin-bottom: 10px;
-      color: #111;
-    }
-    .greeting {
-      font-size: 18px;
-      font-weight: bold;
-      color: #333;
-      margin-bottom: 20px;
-    }
-    .greeting .baba {
-      color: #d62828;
-    }
-    .greeting .shyam {
-      color: #560bad;
-    }
-    .redirecting {
-      color: #888;
-      margin-bottom: 25px;
-    }
-    .button {
-      padding: 10px 18px;
-      background-color: #fcbf49;
-      color: #000;
-      font-weight: bold;
-      border: none;
-      border-radius: 8px;
-      text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      cursor: pointer;
-    }
-    .badge {
-      background-color: #fff3cd;
-      border: 1px solid #ffeeba;
-      padding: 4px 10px;
-      border-radius: 20px;
-      font-size: 14px;
-      margin-bottom: 10px;
-      color: #856404;
-    }
+    body { margin:0; font-family:'Segoe UI'; display:flex; justify-content:center; align-items:center; height:100vh; background:linear-gradient(to right,#f9f9f9,#ffe082); text-align:center; }
+    .container { max-width:600px; background:white; padding:30px; border-radius:20px; box-shadow:0 8px 20px rgba(0,0,0,0.1); }
+    h1 { font-size:2.2em; color:#333; }
+    p { font-size:1.2em; color:#666; margin-top:10px; }
+    .button { margin-top:25px; padding:12px 24px; background:#ffc107; color:black; font-weight:bold; border:none; border-radius:8px; text-decoration:none; display:inline-block; cursor:pointer; }
+    .badge { background:#ffeb3b; padding:6px 14px; border-radius:12px; font-size:.95em; font-weight:bold; display:inline-block; margin-bottom:16px; }
   </style>
-  <script>
-    setTimeout(function () {
-      window.location.href = "https://numberdar-ai.onrender.com";
-    }, 4000);
-  </script>
 </head>
 <body>
-
-  <!-- Base64 image embedded here -->
-  <img src="data:image/jpeg;base64,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" alt="Dushyant Chauhan" class="profile-pic" />
-
-  <div class="badge">⭐ Dushyant Chauhan ⭐</div>
-  <h1>Dushyant Chauhan</h1>
-
-  <div class="greeting">
-    🙏 <span class="baba">Jai Baba Mohan Ram Ki</span>, 
-    <span class="shyam">Jai Shri Shyam</span> 🙏
+  <div class="container">
+    <div class="badge">✨ Dushyant Chauhan</div>
+    <h1>Numberdar AI</h1>
+    <p>Jai Baba Mohan Ram Ki 🙏 Jai Shri Shyam</p>
+    <p>Redirecting to your AI assistant in a few seconds...</p>
+    <a class="button" href="https://numberdarresults.web.app">🔁 Switch to Result Website</a>
   </div>
-
-  <div class="redirecting">Redirecting to your AI assistant...</div>
-
-  <a href="https://numberdarresults.onrender.com" class="button">
-    🔁 Switch to Result Website
-  </a>
-
 </body>
 </html>
