@@ -1,42 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta http-equiv="refresh" content="4; url=https://numberdarresults.onrender.com"/>
-  <title>Numberdar AI</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      background: #f2f2f2;
-    }
-    h1 {
-      color: #333;
-    }
-    .loader {
-      border: 5px solid #f3f3f3;
-      border-top: 5px solid #3498db;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      animation: spin 1s linear infinite;
-      margin-top: 20px;
-    }
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-  </style>
+  <title>Numberdar AI | GPT-4o Assistant</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
-<body>
-  <h1>🙏 Jai Baba Mohan Ram Ki 🙏<br>Welcome to Numberdar AI</h1>
-  <div class="loader"></div>
-  <p>Redirecting to chatbot...</p>
-</body>
+<body class="bg-gray-100 text-gray-800">
+  <header class="bg-indigo-700 text-white p-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold">Numberdar AI 🤖</h1>
+    <a href="https://numberdarresults.onrender.com" target="_blank" class="bg-white text-indigo-700 px-4 py-1 rounded hover:bg-indigo-100">
+      📄 Numberdar Results
+    </a>
+  </header>  <main class="max-w-3xl mx-auto p-4">
+    <div id="chatBox" class="space-y-4 mb-4"></div><form id="chatForm" class="flex gap-2">
+  <input id="userInput" type="text" placeholder="Type your message..." class="flex-1 p-3 rounded border border-gray-300" />
+  <button type="submit" class="bg-indigo-600 text-white px-4 rounded hover:bg-indigo-700">Send</button>
+</form>
+<p class="text-xs mt-2 text-center text-gray-500">Powered by GPT-4o · Created by Dushyant Chauhan</p>
+
+  </main>  <script>
+    const chatBox = document.getElementById('chatBox');
+    const chatForm = document.getElementById('chatForm');
+    const userInput = document.getElementById('userInput');
+
+    chatForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const message = userInput.value.trim();
+      if (!message) return;
+
+      appendMessage('You', message, 'bg-indigo-600 text-white self-end');
+      userInput.value = '';
+      appendMessage('AI', 'Typing...', 'bg-white text-gray-700 self-start typing');
+
+      try {
+        const response = await axios.post(
+          'https://api.openai.com/v1/chat/completions',
+          {
+            model: 'gpt-4o',
+            messages: [{ role: 'user', content: message }]
+          },
+          {
+            headers: {
+              'Authorization': 'Bearer YOUR_OPENAI_API_KEY',
+              'Content-Type': 'application/json'
+            }
+          }
+        );
+
+        document.querySelector('.typing')?.remove();
+        const reply = response.data.choices[0].message.content;
+        appendMessage('AI', reply, 'bg-white text-gray-700 self-start');
+      } catch (error) {
+        document.querySelector('.typing')?.remove();
+        appendMessage('AI', '⚠️ Error: Unable to get response.', 'bg-red-100 text-red-700 self-start');
+      }
+    });
+
+    function appendMessage(sender, text, classes) {
+      const div = document.createElement('div');
+      div.className = `p-3 rounded shadow w-fit max-w-xl ${classes}`;
+      div.textContent = `${sender}: ${text}`;
+      chatBox.appendChild(div);
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+  </script></body>
 </html>
