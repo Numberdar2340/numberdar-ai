@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Numberdar Study - Notes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>📘 Numberdar Study</h1>
+
+  <div class="filters">
+    <select id="classFilter">
+      <option value="">All Classes</option>
+      <option value="6">Class 6</option>
+      <option value="7">Class 7</option>
+      <option value="8">Class 8</option>
+      <option value="9">Class 9</option>
+      <option value="10">Class 10</option>
+      <option value="11">Class 11</option>
+      <option value="12">Class 12</option>
+    </select>
+
+    <select id="subjectFilter">
+      <option value="">All Subjects</option>
+      <option>Math</option>
+      <option>Science</option>
+      <option>English</option>
+      <option>Hindi</option>
+    </select>
+
+    <select id="mediumFilter">
+      <option value="">All Mediums</option>
+      <option>Hindi</option>
+      <option>English</option>
+    </select>
+  </div>
+
+  <div id="notesContainer"></div>
+
+  <script src="scripts/firebase.js"></script>
+  <script src="scripts/app.js"></script>
+</body>
+</html>
