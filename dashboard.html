@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard - Numberdar Study</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 p-6">
+  <h1 class="text-3xl font-bold mb-6 text-center text-blue-700">📋 Admin Dashboard</h1>
+
+  <form class="max-w-2xl mx-auto bg-white shadow rounded-xl p-6 space-y-4">
+    <div>
+      <label class="block font-semibold">Class</label>
+      <input type="text" placeholder="e.g., Class 10" class="w-full border px-4 py-2 rounded" />
+    </div>
+    <div>
+      <label class="block font-semibold">Subject</label>
+      <input type="text" placeholder="e.g., Science" class="w-full border px-4 py-2 rounded" />
+    </div>
+    <div>
+      <label class="block font-semibold">Chapter Name</label>
+      <input type="text" placeholder="e.g., Life Processes" class="w-full border px-4 py-2 rounded" />
+    </div>
+    <div>
+      <label class="block font-semibold">Question</label>
+      <textarea placeholder="Enter question here..." class="w-full border px-4 py-2 rounded"></textarea>
+    </div>
+    <div>
+      <label class="block font-semibold">Answer</label>
+      <textarea placeholder="Enter answer here..." class="w-full border px-4 py-2 rounded"></textarea>
+    </div>
+    <button class="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700">✅ Save</button>
+  </form>
+</body>
+</html>
