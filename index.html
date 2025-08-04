@@ -1,54 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Numberdar Study - Class 10 & 11</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" href="/assets/dushyant.jpg" />
-  </head>
-  <body class="min-h-screen bg-[#fafaf9] font-sans">
-    <!-- Header -->
-    <header class="bg-[#171d25] pt-6 pb-3 px-4 flex items-center justify-between">
-      <div class="flex items-center gap-2">
-        <img src="/assets/dushyant.jpg" alt="Dushyant Chauhan" class="w-10 h-10 rounded-full border border-yellow-400" />
-        <span class="text-[#fac58f] font-semibold text-lg leading-none">
-          Numberdar Study
-        </span>
-      </div>
-      <a href="https://numberdarresults.onrender.com" target="_blank" class="px-3 py-1 bg-[#fac58f] text-[#171d25] font-medium rounded text-xs shadow">
-        Results Website
-      </a>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Numberdar Study - Class 10 & 11</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="/assets/dushyant.jpg" />
+</head>
+<body class="min-h-screen bg-[#fafaf9] font-sans">
 
-    <!-- Navigation Section -->
-    <nav class="bg-[#fafaf9] px-4 py-4 grid grid-cols-2 sm:grid-cols-3 gap-3 text-sm">
-      <a href="#class10" class="bg-[#e19446] text-white rounded p-3 text-center font-semibold">Class 10 Science</a>
-      <a href="#class11" class="bg-[#98999b] text-white rounded p-3 text-center font-semibold">Class 11 Hindi</a>
-    </nav>
+  <!-- Header -->
+  <header class="bg-[#171d25] pt-6 pb-3 px-4 flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <img src="/assets/dushyant.jpg" alt="Dushyant Chauhan" class="w-10 h-10 rounded-full border border-yellow-400" />
+      <span class="text-[#fac58f] font-semibold text-lg leading-none">
+        Numberdar Study
+      </span>
+    </div>
+    <a href="https://numberdarresults.onrender.com" target="_blank" class="px-3 py-1 bg-[#fac58f] text-[#171d25] font-medium rounded text-xs shadow">
+      Results Website
+    </a>
+  </header>
 
-    <!-- Class 10 Section -->
-    <main class="px-4 mt-6" id="class10">
-      <h2 class="text-[#171d25] text-2xl font-bold mb-4">📘 Class 10 Science - Chapter 1: Life Processes</h2>
-      <!-- English and Hindi Q&A Here (already inserted) -->
-      <!-- Content kept from previous version -->
-      [CLASS 10 Q&A - already present above, unchanged]
-    </main>
+  <!-- Navigation -->
+  <nav class="bg-[#fafaf9] px-4 py-4 grid grid-cols-2 sm:grid-cols-3 gap-3 text-sm">
+    <a href="#class10science" class="bg-[#e19446] text-white rounded p-3 text-center font-semibold">Class 10 Science</a>
+    <a href="#class11hindi" class="bg-[#98999b] text-white rounded p-3 text-center font-semibold">Class 11 Hindi</a>
+  </nav>
 
-    <!-- Class 11 Section -->
-    <section class="px-4 mt-10" id="class11">
-      <h2 class="text-[#171d25] text-2xl font-bold mb-4">📘 कक्षा 11 हिंदी - पाठ 1: नमक का दारोगा (आरोह भाग 1)</h2>
-      <p class="text-sm text-gray-700 mb-4">पूरा अभ्यास, प्रश्न उत्तर, व्याख्या और भाषा की चर्चा नीचे दी गई है।</p>
-      <a href="/assets/class11-hindi-namak-ka-daroga.html" target="_blank" class="inline-block px-4 py-2 bg-[#e19446] text-white rounded shadow hover:bg-[#c97d2f]">पूरा समाधान पढ़ें</a>
+  <!-- Class 10 Science -->
+  <main class="px-4 mt-6" id="class10science">
+    <h2 class="text-[#171d25] text-2xl font-bold mb-4">📘 Class 10 Science - Chapter 1: Life Processes</h2>
+
+    <section class="mb-4 border-b pb-4">
+      <button onclick="toggleAnswer(this)" class="text-lg text-left w-full font-semibold text-[#e19446]">
+        Q1. What are life processes?
+      </button>
+      <p class="text-gray-700 mt-2 ml-4 hidden">
+        Life processes are basic activities like nutrition, respiration, transportation, and excretion that living organisms perform to stay alive.
+      </p>
     </section>
 
-    <!-- Footer -->
-    <footer class="mt-10 text-center text-xs text-[#74848c] px-4 pb-8">
-      <hr class="mb-4 border-[#e19446]" />
-      <p>
-        Numberdar Study is a free educational platform created by <strong>Dushyant Chauhan</strong>.
+    <section class="mb-4 border-b pb-4">
+      <button onclick="toggleAnswer(this)" class="text-lg text-left w-full font-semibold text-[#e19446]">
+        Q2. What is nutrition? Name its types.
+      </button>
+      <p class="text-gray-700 mt-2 ml-4 hidden">
+        Nutrition is the process of taking in and using food. It is of two types: Autotrophic (in plants) and Heterotrophic (in animals).
       </p>
-      <p class="mt-2">📚 Jai Baba Mohan Ram Ki | Jai Shri Shyam 🙏</p>
-    </footer>
-  </body>
+    </section>
+  </main>
+
+  <!-- Class 11 Hindi -->
+  <main class="px-4 mt-10" id="class11hindi">
+    <h2 class="text-[#171d25] text-2xl font-bold mb-4">📕 Class 11 Hindi - पाठ 1: नमक का दारोगा</h2>
+
+    <section class="mb-4 border-b pb-4">
+      <button onclick="toggleAnswer(this)" class="text-lg text-left w-full font-semibold text-[#a66239]">
+        प्रश्न 1: कहानी का कौन-सा पात्र आपको सर्वाधिक प्रभावित करता है?
+      </button>
+      <p class="text-gray-700 mt-2 ml-4 hidden">
+        कहानी का नायक दारोगा वंशीधर हमें सर्वाधिक प्रभावित करता है जो ईमानदार, आज्ञाकारी, धर्मनिष्ठ तथा कर्मयोगी जैसे गुणों से युक्त है।
+      </p>
+    </section>
+
+    <section class="mb-4 border-b pb-4">
+      <button onclick="toggleAnswer(this)" class="text-lg text-left w-full font-semibold text-[#a66239]">
+        प्रश्न 2: पंडित अलोपीदीन के कौन-से दो पहलू सामने आते हैं?
+      </button>
+      <p class="text-gray-700 mt-2 ml-4 hidden">
+        एक ओर वह रिश्वत देने वाला भ्रष्ट व्यक्ति है, दूसरी ओर अंत में वह पछताता है और वंशीधर को स्थायी मैनेजर बना देता है।
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-10 text-center text-xs text-[#74848c] px-4 pb-8">
+    <hr class="mb-4 border-[#e19446]" />
+    <p>
+      Numberdar Study is a free educational platform created by <strong>Dushyant Chauhan</strong>.
+    </p>
+    <p class="mt-2">📚 Jai Baba Mohan Ram Ki | Jai Shri Shyam 🙏</p>
+  </footer>
+
+  <!-- Toggle Script -->
+  <script>
+    function toggleAnswer(btn) {
+      const para = btn.nextElementSibling;
+      para.classList.toggle("hidden");
+    }
+  </script>
+</body>
 </html>
